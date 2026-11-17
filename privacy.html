@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chính sách bảo mật — Novela MD3</title>
+<meta name="description" content="Chính sách bảo mật của ứng dụng Novela MD3: cách ứng dụng truy cập, lưu trữ và bảo vệ dữ liệu Google Drive của người dùng.">
+<style>
+  :root {
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --text: #1c1b22;
+    --muted: #5b5b66;
+    --accent: #4a5fd8;
+    --border: #e4e4ee;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 48px; }
+  h1 { font-size: 1.8rem; margin: 24px 0 6px; }
+  .updated { color: var(--muted); font-size: 0.92rem; margin-bottom: 26px; }
+  h2 { font-size: 1.2rem; margin: 30px 0 10px; }
+  p, li { margin-bottom: 8px; }
+  ul, ol { margin: 6px 0 14px 24px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 22px 24px; margin-top: 14px;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    background: #eeeef6; border-radius: 6px; padding: 1px 6px;
+    font-size: 0.9em; font-family: ui-monospace, Menlo, Consolas, monospace;
+  }
+  footer {
+    margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.9rem; text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Chính sách bảo mật</h1>
+  <p class="updated">Ứng dụng: Novela MD3 (<code>io.novela.md3</code>) · Cập nhật lần cuối: 17/11/2026</p>
+
+  <p>Chính sách này mô tả cách ứng dụng Novela MD3 truy cập, sử dụng, lưu trữ và bảo vệ dữ liệu
+  người dùng, đặc biệt là dữ liệu Google Drive khi bạn bật tính năng sao lưu Google Drive.</p>
+
+  <h2>1. Ứng dụng truy cập dữ liệu Google nào?</h2>
+  <div class="card">
+    <p>Khi bạn đăng nhập Google và bật sao lưu Drive, ứng dụng xin đúng hai quyền (OAuth scopes):</p>
+    <ul>
+      <li><code>https://www.googleapis.com/auth/drive.file</code> — cho phép ứng dụng <strong>chỉ
+      tạo và quản lý các file do chính nó tạo</strong> trong thư mục <code>Novela Backup</code> trên
+      Google Drive của bạn. Ứng dụng <strong>không thể</strong> đọc, sửa hay xoá các file khác trên
+      Drive mà không do nó tạo.</li>
+      <li><code>https://www.googleapis.com/auth/userinfo.email</code> — lấy địa chỉ email để hiển thị
+      tài khoản đang đăng nhập trong màn hình cài đặt.</li>
+    </ul>
+  </div>
+
+  <h2>2. Ứng dụng dùng dữ liệu đó để làm gì?</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Bản sao lưu ứng dụng</strong>: file zip chứa cấu hình, nguồn sách, tiến độ đọc,
+      từ điển riêng... được ghi vào thư mục <code>Novela Backup</code> trên Drive của bạn.</li>
+      <li><strong>Tiến độ đọc</strong>: file JSON nhỏ ghi vị trí đang đọc của từng quyển, để tiếp tục
+      đọc giữa các máy.</li>
+      <li><strong>Khôi phục</strong>: đọc lại các file đó từ <code>Novela Backup</code> khi bạn chọn
+      khôi phục bản sao lưu.</li>
+    </ul>
+  </div>
+
+  <h2>3. Ứng dụng lưu dữ liệu ở đâu?</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Không có máy chủ của chúng tôi</strong>. Ứng dụng không gửi dữ liệu của bạn tới
+      bất kỳ máy chủ nào do chúng tôi vận hành.</li>
+      <li>Dữ liệu Google Drive nằm <strong>trên Google Drive của chính bạn</strong>, trong thư mục
+      <code>Novela Backup</code> — bạn có thể xem và xoá bất cứ lúc nào trên Drive web/app.</li>
+      <li>Dữ liệu hoạt động hàng ngày (kệ sách, tiến độ, cài đặt) nằm trong bộ nhớ của thiết bị bạn.</li>
+    </ul>
+  </div>
+
+  <h2>4. Chia sẻ dữ liệu</h2>
+  <div class="card">
+    <p>Ứng dụng <strong>không bán, không chia sẻ</strong> dữ liệu Google Drive của bạn cho bên thứ ba,
+    không dùng cho quảng cáo và không dùng để huấn luyện mô hình AI. Dữ liệu chỉ đi giữa thiết bị của
+    bạn và API của Google khi bạn thực hiện sao lưu / khôi phục / đồng bộ tiến độ.</p>
+  </div>
+
+  <h2>5. Dữ liệu dịch thuật</h2>
+  <div class="card">
+    <p>Tính năng dịch truyện gọi dịch vụ AI do <strong>bạn tự cấu hình</strong> (API key và địa chỉ
+    dịch vụ do bạn nhập). Nội dung chương được gửi tới đúng dịch vụ đó để dịch; việc dùng dịch vụ nào
+    và điều khoản riêng của nó là lựa chọn của bạn. Ứng dụng không tự gửi dữ liệu qua dịch vụ nào nếu
+    bạn chưa bật.</p>
+  </div>
+
+  <h2>6. Thu hồi quyền và xoá dữ liệu</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Đăng xuất trong ứng dụng</strong>: Cài đặt → Sao lưu và khôi phục → bấm
+      "Tài khoản Google Drive" → Đăng xuất. Điều này xoá phiên đăng nhập trên máy.</li>
+      <li><strong>Thu hồi quyền ở mức tài khoản Google</strong>: vào trang
+      <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>,
+      chọn Novela MD3 và nhấn "Xoá quyền truy cập".</li>
+      <li><strong>Xoá dữ liệu trên Drive</strong>: mở Google Drive, xoá thư mục
+      <code>Novela Backup</code>. Google Drive đặt trong thùng rác 30 ngày trước khi xoá hẳn.</li>
+    </ul>
+  </div>
+
+  <h2>7. Quyền riêng tư của trẻ em</h2>
+  <div class="card">
+    <p>Ứng dụng dành cho người dùng từ 13 tuổi trở lên và không thu thập dữ liệu một cách cố ý từ
+    trẻ em dưới 13 tuổi.</p>
+  </div>
+
+  <h2>8. Thay đổi chính sách</h2>
+  <div class="card">
+    <p>Nếu chính sách thay đổi, bản cập nhật sẽ được đăng tại trang này kèm ngày cập nhật mới.</p>
+  </div>
+
+  <h2>9. Liên hệ</h2>
+  <div class="card">
+    <p>Câu hỏi về chính sách này, gửi email tới
+    <a href="mailto:thanhxnam2005@gmail.com">thanhxnam2005@gmail.com</a>.</p>
+  </div>
+
+  <footer>
+    Novela MD3 · <a href="index.html">Trang chủ</a> · © 2026 hongtrantiende
+  </footer>
+
+</div>
+</body>
+</html>

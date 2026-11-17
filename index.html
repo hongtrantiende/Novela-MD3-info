@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novela MD3 — Trình đọc sách Android</title>
+<meta name="description" content="Novela MD3 — trình đọc sách Android: đọc truyện online/offline, dịch truyện chữ Hán sang tiếng Việt, từ điển riêng theo truyện, sao lưu Google Drive.">
+<style>
+  :root {
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --text: #1c1b22;
+    --muted: #5b5b66;
+    --accent: #4a5fd8;
+    --border: #e4e4ee;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 48px; }
+  header { text-align: center; padding: 40px 0 24px; }
+  header .logo {
+    width: 88px; height: 88px; border-radius: 22px;
+    background: linear-gradient(135deg, #4a5fd8, #7b3fd4);
+    color: #fff; font-size: 40px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px; letter-spacing: 1px;
+  }
+  h1 { font-size: 2rem; margin-bottom: 6px; }
+  .tagline { color: var(--muted); font-size: 1.05rem; }
+  h2 { font-size: 1.25rem; margin: 34px 0 12px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 22px 24px; margin-top: 14px;
+  }
+  ul.feature { list-style: none; }
+  ul.feature li { padding: 8px 0 8px 30px; position: relative; }
+  ul.feature li::before {
+    content: "•"; color: var(--accent); font-weight: 700;
+    position: absolute; left: 12px; font-size: 1.2rem; top: 4px;
+  }
+  .note { color: var(--muted); font-size: 0.92rem; margin-top: 10px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer {
+    margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.9rem; text-align: center;
+  }
+  code {
+    background: #eeeef6; border-radius: 6px; padding: 1px 6px;
+    font-size: 0.9em; font-family: ui-monospace, Menlo, Consolas, monospace;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">Nov</div>
+    <h1>Novela MD3</h1>
+    <p class="tagline">Trình đọc sách Android — đọc truyện, dịch truyện chữ Hán sang tiếng Việt</p>
+  </header>
+
+  <h2>Novela MD3 là gì?</h2>
+  <div class="card">
+    <p>Novela MD3 là trình đọc sách trên Android dành cho truyện chữ (novel): đọc truyện từ nguồn
+    online hoặc file <code>.txt</code>/<code>.epub</code> trên máy, kèm bộ công cụ dịch truyện chữ
+    Hán sang tiếng Việt ngay khi đọc. Giao diện theo thiết kế Material Design 3 hiện đại.</p>
+    <p class="note">Ứng dụng phát triển từ mã nguồn mở Legado (legado-with-MD3), bản phân phối
+    <code>io.novela.md3</code>.</p>
+  </div>
+
+  <h2>Tính năng chính</h2>
+  <div class="card">
+    <ul class="feature">
+      <li><strong>Đọc truyện online / offline</strong> — hỗ trợ nguồn sách tùy chỉnh, mục lục tự động, đổi font/nền/chủ đề.</li>
+      <li><strong>Dịch truyện chữ Hán → tiếng Việt</strong> — dịch chương theo nguồn AI bạn cấu hình, dịch nhanh theo đoạn.</li>
+      <li><strong>Từ điển riêng theo từng truyện</strong> — quét tên nhân vật, lưu nghĩa riêng, bản dịch đã đọc tự vá theo từ điển.</li>
+      <li><strong>Sao lưu Google Drive</strong> — bản sao lưu nằm trong thư mục <code>Novela Backup</code> trên Drive của chính bạn, xem được trên web/app Drive.</li>
+      <li><strong>Đồng bộ tiến độ đọc</strong> — tiếp tục đúng chỗ dừng giữa các máy qua Drive.</li>
+      <li><strong>Đọc to (TTS)</strong> — nhiều nguồn giọng đọc tùy chọn.</li>
+    </ul>
+  </div>
+
+  <h2>Sao lưu Google Drive hoạt động thế nào?</h2>
+  <div class="card">
+    <p>Khi bạn đăng nhập Google trong ứng dụng, Novela MD3 xin quyền
+    <code>drive.file</code> — quyền <strong>chỉ tạo và quản lý file do chính ứng dụng tạo</strong>
+    (thư mục <code>Novela Backup</code> trên Drive của bạn). Ứng dụng không đọc, không sửa bất kỳ
+    file nào khác trên Drive của bạn.</p>
+    <p class="note">Chi tiết cách dữ liệu được xử lý: xem <a href="privacy.html">Chính sách bảo mật</a>.</p>
+  </div>
+
+  <h2>Liên hệ</h2>
+  <div class="card">
+    <p>Gặp lỗi hoặc muốn góp ý tính năng, hãy gửi email tới
+    <a href="mailto:thanhxnam2005@gmail.com">thanhxnam2005@gmail.com</a>.</p>
+  </div>
+
+  <footer>
+    Novela MD3 · <a href="privacy.html">Chính sách bảo mật</a> · © 2026 hongtrantiende
+  </footer>
+
+</div>
+</body>
+</html>
